@@ -1,0 +1,94 @@
+<section id="contact" class="contact">
+    <div class="container fade-in-up">
+        <h2>Contacto</h2>
+        <p class="section-desc">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+
+        <div class="contact-container">
+            <div class="contact-info glass-card">
+                <h3>Información de Contacto</h3>
+                <p>Estoy disponible para proyectos freelance, colaboraciones creativas o simplemente para charlar sobre
+                    tecnología.</p>
+
+                <div class="info-items">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>lfumero.dev&#64;example.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Ubicación</h4>
+                            <p>España / Remoto</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links-footer">
+                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper glass-card">
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" formControlName="name" placeholder="Tu nombre"
+                            [class.invalid]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+                        <span class="error-msg"
+                            *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+                            El nombre es requerido
+                        </span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" formControlName="email" placeholder="tu@email.com"
+                            [class.invalid]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+                        <span class="error-msg"
+                            *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+                            Introduce un email válido
+                        </span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Asunto</label>
+                        <input type="text" id="subject" formControlName="subject" placeholder="¿De qué quieres hablar?"
+                            [class.invalid]="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" formControlName="message" rows="5"
+                            placeholder="Cuéntame más sobre tu proyecto..."
+                            [class.invalid]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"></textarea>
+                        <span class="error-msg"
+                            *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+                            El mensaje es requerido
+                        </span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary submit-btn"
+                        [disabled]="contactForm.invalid || isSubmitting">
+                        <span *ngIf="!isSubmitting">Enviar Mensaje</span>
+                        <span *ngIf="isSubmitting"><i class="fas fa-spinner fa-spin"></i> Enviando...</span>
+                    </button>
+
+                    <div class="success-msg" *ngIf="submitSuccess">
+                        <i class="fas fa-check-circle"></i> ¡Mensaje enviado con éxito! Te responderé lo antes posible.
+                    </div>
+
+                    <div class="error-msg global" *ngIf="submitError">
+                        <i class="fas fa-exclamation-circle"></i> Ha ocurrido un error al enviar el mensaje. Por favor,
+                        inténtalo de nuevo.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

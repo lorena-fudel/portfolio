@@ -1,0 +1,50 @@
+.footer {
+    background-color: var(--secondary);
+    color: white;
+    padding: 3rem 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.footer-logo {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    .logo-dot {
+        color: var(--primary);
+    }
+}
+
+.footer-copy {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.25rem;
+
+    a {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 1.25rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: white;
+            transform: translateY(-2px);
+        }
+    }
+}

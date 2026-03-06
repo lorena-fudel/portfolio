@@ -1,0 +1,52 @@
+<section id="projects" class="projects-section">
+    <div class="container fade-in-up">
+        <h2>Mis Proyectos</h2>
+
+        <!-- Contenedor del Carrusel y Navegación -->
+        <div class="carousel-wrapper">
+            <button class="carousel-control prev" (click)="scrollLeft()" aria-label="Anterior">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="carousel-container" #carouselContainer>
+                <div class="carousel-track">
+
+                    <!-- Tarjeta Iterativa -->
+                    <div class="project-card" *ngFor="let p of projects" [ngClass]="p.cssClass" (click)="openModal(p)">
+                        <div class="card-inner">
+                            <div class="image-wrapper">
+                                <img [src]="p.image" [alt]="p.title">
+                                <span class="style-badge">{{ p.style }}</span>
+                            </div>
+                            <div class="project-info">
+                                <h3>{{ p.title }}</h3>
+                                <p>{{ p.type }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <button class="carousel-control next" (click)="scrollRight()" aria-label="Siguiente">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal Lightbox -->
+    <div class="modal-overlay" *ngIf="isModalOpen" (click)="closeModal()">
+        <div class="modal-content" (click)="$event.stopPropagation()">
+            <button class="modal-close" (click)="closeModal()">&times;</button>
+            <div class="modal-image-container">
+                <img [src]="selectedProject?.image" [alt]="selectedProject?.title">
+            </div>
+            <div class="modal-details">
+                <h3>{{ selectedProject?.title }}</h3>
+                <p>{{ selectedProject?.type }} - {{ selectedProject?.style }}</p>
+                <a href="#contact" class="btn btn-primary cta-btn" (click)="closeModal()">¡Contactar para un proyecto
+                    así!</a>
+            </div>
+        </div>
+    </div>
+</section>

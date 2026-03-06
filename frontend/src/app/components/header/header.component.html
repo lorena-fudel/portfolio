@@ -1,0 +1,25 @@
+<header class="header" [class.scrolled]="isScrolled">
+    <div class="header-container container">
+        <a href="#" class="logo">
+            <span class="logo-text">LF</span>
+            <span class="logo-dot">.</span>
+        </a>
+
+        <button class="mobile-toggle" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen">
+            <i class="fas" [class.fa-bars]="!isMenuOpen" [class.fa-times]="isMenuOpen"></i>
+        </button>
+
+        <nav class="nav" [class.open]="isMenuOpen">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#about" (click)="closeMenu()">Sobre mí</a></li>
+                <li class="nav-item"><a href="#technologies" (click)="closeMenu()">Mis tecnologías</a>
+                </li>
+                <li class="nav-item"><a href="#experience" (click)="closeMenu()">Experiencia</a></li>
+                <li class="nav-item"><a href="#goals" (click)="closeMenu()">Propósitos</a></li>
+                <li class="nav-item"><a href="#projects" (click)="closeMenu()">Mis Proyectos</a></li>
+                <li class="nav-item"><a href="#contact" (click)="closeMenu()">Contacto</a></li>
+                <li class="nav-item blog-link"><a href="#" target="_blank" (click)="closeMenu()">Mi Blog</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>

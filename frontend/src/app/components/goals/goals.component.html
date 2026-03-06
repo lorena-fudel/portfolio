@@ -1,0 +1,45 @@
+<section id="goals" class="goals">
+    <div class="container fade-in-up">
+        <h2>Mis Propósitos</h2>
+        <p class="section-desc">Hacia dónde dirijo mis esfuerzos profesionales y personales.</p>
+
+        <div class="goals-container" *ngIf="goals.length > 0; else loading">
+            <div class="goals-column">
+                <h3 class="column-title">
+                    <i class="fas fa-briefcase"></i> Profesionales
+                </h3>
+                <div class="goal-card glass-card" *ngFor="let goal of professionalGoals">
+                    <div class="goal-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="goal-content">
+                        <h4>{{ goal.title }}</h4>
+                        <p>{{ goal.description }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="goals-column">
+                <h3 class="column-title">
+                    <i class="fas fa-user-astronaut"></i> Personales
+                </h3>
+                <div class="goal-card glass-card" *ngFor="let goal of personalGoals">
+                    <div class="goal-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="goal-content">
+                        <h4>{{ goal.title }}</h4>
+                        <p>{{ goal.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ng-template #loading>
+            <div class="loading-spinner">
+                <i class="fas fa-circle-notch fa-spin"></i>
+                <p>Cargando propósitos...</p>
+            </div>
+        </ng-template>
+    </div>
+</section>
