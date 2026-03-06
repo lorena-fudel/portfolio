@@ -29,4 +29,8 @@ Thumbs.db
 # Angular cache
 .angular/
 
+# Private local docs (for developers only)
+DEPLOY.md
+
+
 

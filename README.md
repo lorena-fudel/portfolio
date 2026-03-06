@@ -5,9 +5,11 @@ Este repositorio contiene un portfolio personal interactivo desarrollado como un
 ## 🚀 Características Principales
 
 *   **Diseño Moderno y Responsivo:** Interfaz construida con un esquema de colores cálidos, efectos de "glassmorphism", gradientes profesionales y diseño adaptable a cualquier dispositivo móvil o de escritorio.
-*   **Single Page Application (SPA):** Navegación fluida y sin recargas de página mediante scroll suave (*smooth scrolling*) entre las distintas secciones de una única página.
+*   **Single Page Application (SPA):** Navegación fluida y sin recargas de página mediante scroll suave (*smooth scrolling*) con efecto *snap* entre las secciones de la página.
 *   **Secciones Dinámicas:** La información mostrada en las secciones "Mis tecnologías", "Experiencia" y "Propósitos" provienen de la base de datos a través de peticiones HTTP a la API REST.
+*   **Carrusel de Proyectos:** Sección "Mis Proyectos" con carrusel horizontal, scroll automático, flechas de navegación y modal tipo *lightbox* al hacer clic en cada proyecto con enlace directo a la sección de contacto.
 *   **Formulario de Contacto:** Envío de mensajes integrado con base de datos propia a través de rutinas asíncronas.
+*   **Favicon Personalizado:** Icono LF con gradiente naranja corporativo, visible en la pestaña del navegador.
 *   **Gestión Proxy Angular:** Todas las peticiones del tipo `/api` son enrutadas transparentemente al backend a través de `proxy.conf.json` en local.
 
 ## 🛠️ Tecnologías Utilizadas
@@ -87,6 +89,11 @@ cd frontend
     ```
 *Entra en tu navegador en `http://localhost:4200`. La configuración conectará limpiamente la UI con tu API backend local.*
 
+
+🔗 **Demo en vivo:** [https://lorena-fudel.github.io/portfolio/](https://lorena-fudel.github.io/portfolio/)
+
+> **Nota:** En GitHub Pages solo el frontend es accesible. El backend y la base de datos son exclusivos del entorno local de desarrollo.
+
 ## 🛣️ Referencia Rápida a la API
 
 *   `GET /api/technologies`: Lista todas tus tecnologías agrupadas (Backend, Frontend, DB).
@@ -94,5 +101,7 @@ cd frontend
 *   `GET /api/goals`: Objetivos diferenciados por categoría (personales vs. profesionales).
 *   `POST /api/contact`: Formato `{ name, email, subject, message }`. Almacena un registro de un potencial cliente.
 
-## 👨‍💻 Autor / Proyecto
-Portafolio Web - Proyecto subido y publicado para GitLab.
+## 👨‍💻 Autor
+
+**Lorena Fumero** — Desarrolladora Fullstack  
+🔗 [GitHub](https://github.com/lorena-fudel) · 📧 Contacto disponible a través del formulario del portfolio
