@@ -1,0 +1,30 @@
+# =======================
+# GLOBAL .gitignore
+# =======================
+
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Environment variables (NEVER commit these!)
+.env
+.env.local
+.env.production
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Angular cache
+.angular/
