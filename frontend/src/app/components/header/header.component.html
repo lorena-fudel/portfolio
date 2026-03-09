@@ -5,9 +5,14 @@
             <span class="logo-dot">.</span>
         </a>
 
-        <button class="mobile-toggle" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen">
-            <i class="fas" [class.fa-bars]="!isMenuOpen" [class.fa-times]="isMenuOpen"></i>
-        </button>
+        <div class="header-actions">
+            <button class="theme-toggle" (click)="toggleTheme()" aria-label="Cambiar tema">
+                <i class="fas" [class.fa-moon]="!isDarkMode" [class.fa-sun]="isDarkMode"></i>
+            </button>
+            <button class="mobile-toggle" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen">
+                <i class="fas" [class.fa-bars]="!isMenuOpen" [class.fa-times]="isMenuOpen"></i>
+            </button>
+        </div>
 
         <nav class="nav" [class.open]="isMenuOpen">
             <ul class="nav-list">

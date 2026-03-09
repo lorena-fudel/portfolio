@@ -60,7 +60,13 @@
 .image-wrapper {
     position: relative;
     height: 200px;
-    width: 100%;
+    width: calc(100% - 2rem);
+    margin: 1rem auto 0;
+    /* Espaciado para que quede dentro de la tarjeta como una caja */
+    border-radius: var(--radius-md);
+    /* Bordes redondeados de la caja */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* Sombra para resaltar la caja */
     overflow: hidden;
     background: var(--gradient-soft);
 
@@ -213,6 +219,25 @@
     align-items: center;
     width: 100%;
     margin-top: 3rem;
+
+    /* Efecto "Caja / Cubo" que engloba todo el carrusel */
+    background: var(--bg-color);
+    /* Fondo igual o ligeramente distinto para separarlo */
+    border-radius: var(--radius-lg);
+    padding: 2rem 1rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    /* Sombra suave para que flote sobre el fondo de la sección */
+    border: 1px solid rgba(0, 0, 0, 0.03);
+
+    /* Para el modo oscuro */
+    transition: all 0.3s ease;
+}
+
+:host-context(body.dark-theme) .carousel-wrapper {
+    background: rgba(30, 30, 30, 0.5);
+    /* Fondo gris oscuro en el cubo */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .carousel-container {

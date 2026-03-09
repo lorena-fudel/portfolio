@@ -26,6 +26,22 @@
     --radius-pill: 50px;
 }
 
+/* Dark Theme overrides */
+body.dark-theme {
+    --bg-color: #121212;
+    --text-main: #f0f0f0;
+    --text-light: #a0a0a0;
+    --nav-bg: rgba(18, 18, 18, 0.95);
+    --secondary: #ecf0f1;
+    --gradient-soft: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+}
+
+body.dark-theme .glass-card {
+    background: rgba(30, 30, 30, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
