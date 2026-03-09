@@ -20,7 +20,17 @@ export class ProjectsComponent implements AfterViewInit, OnDestroy {
     { title: 'Pride Hub', type: 'Comunidad LGTBI', style: 'Neo-brutalismo', image: 'assets/lgtbi_es.png', cssClass: 'neo-brutalist' },
     { title: 'Izakaya Sushi', type: 'Restaurante Japonés', style: 'Minimalismo Cálido', image: 'assets/japan_es.png', cssClass: 'minimalist' },
     { title: 'Studio Style', type: 'Peluquería', style: 'Glassmorphism', image: 'assets/salon_es.png', cssClass: 'glass' },
-    { title: 'El rincón del mojo', type: 'Guachinche', style: 'Estilo Editorial', image: 'assets/guachinche_es.png', cssClass: 'magazine' }
+    { title: 'El rincón del mojo', type: 'Guachinche', style: 'Estilo Editorial', image: 'assets/guachinche_es.png', cssClass: 'magazine' },
+    { title: 'Neon Nights', type: 'Discoteca', style: 'Glassmorphism', image: 'assets/discoteca.png', cssClass: 'glass' },
+    { title: 'Smash & Go', type: 'Hamburguesería', style: 'Neo-brutalismo', image: 'assets/burger.png', cssClass: 'neo-brutalist' },
+    { title: 'El Buen Bocata', type: 'Cafetería y Sandwiches', style: 'Bento Grid', image: 'assets/cafe.png', cssClass: 'bento' },
+    { title: 'Dulce Hogar', type: 'Tartería Artesanal', style: 'Estilo Editorial', image: 'assets/dulceria.png', cssClass: 'magazine' },
+    { title: 'Panes del Mundo', type: 'Panadería Artesanal', style: 'Minimalismo Cálido', image: 'assets/panaderia.png', cssClass: 'minimalist' },
+    { title: 'Lorena Masajes', type: 'Masajista Freelance', style: 'Brutalismo', image: 'assets/masaje.png', cssClass: 'neo-brutalist' },
+    { title: 'Código y Café', type: 'Blog Tech', style: 'Bento Grid', image: 'assets/blog.png', cssClass: 'bento' },
+    { title: 'Esencia Canaria', type: 'Ecommerce (Canarias)', style: 'Glassmorphism', image: 'assets/ecommerce.png', cssClass: 'glass' },
+    { title: 'Tenerife Aventura', type: 'Turismo y Rutas', style: 'Estilo Editorial', image: 'assets/turismo.png', cssClass: 'magazine' },
+    { title: 'Casas de Canarias', type: 'Inmobiliaria', style: 'Bento Grid', image: 'assets/inmobiliaria.png', cssClass: 'bento' }
   ];
 
   ngAfterViewInit() {
