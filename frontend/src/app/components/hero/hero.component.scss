@@ -110,12 +110,12 @@
 }
 
 .blob-1 {
-    background: linear-gradient(135deg, rgba(243, 156, 18, 0.4) 0%, rgba(211, 84, 0, 0.4) 100%);
+    background: linear-gradient(135deg, rgba(243, 156, 18, 0.4) 0%, rgba(158, 102, 65, 0.4) 100%);
     animation-delay: 0s;
 }
 
 .blob-2 {
-    background: linear-gradient(135deg, rgba(230, 126, 34, 0.3) 0%, rgba(192, 57, 43, 0.3) 100%);
+    background: linear-gradient(135deg, rgba(163, 129, 100, 0.3) 0%, rgba(221, 184, 180, 0.3) 100%);
     animation-duration: 10s;
     animation-delay: -2s;
 }
@@ -130,7 +130,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 10px 30px rgba(211, 84, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(129, 67, 25, 0.3);
 
     i {
         font-size: 5rem;

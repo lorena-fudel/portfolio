@@ -8,6 +8,8 @@ import { RouterModule } from '@angular/router';
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })
+
+
 export class HeroComponent {
 
 }

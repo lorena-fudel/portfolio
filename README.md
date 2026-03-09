@@ -8,7 +8,7 @@ Este repositorio contiene un portfolio personal interactivo desarrollado como un
 *   **Single Page Application (SPA):** Navegación fluida y sin recargas de página mediante scroll suave (*smooth scrolling*) con efecto *snap* entre las secciones de la página.
 *   **Secciones Dinámicas:** La información mostrada en las secciones "Mis tecnologías", "Experiencia" y "Propósitos" provienen de la base de datos a través de peticiones HTTP a la API REST.
 *   **Carrusel de Proyectos:** Sección "Mis Proyectos" con carrusel horizontal, scroll automático, flechas de navegación y modal tipo *lightbox* al hacer clic en cada proyecto con enlace directo a la sección de contacto.
-*   **Formulario de Contacto:** Envío de mensajes integrado con base de datos propia a través de rutinas asíncronas.
+*   **Formulario de Contacto:** Envío de mensajes integrado con base de datos propia a través de rutas asíncronas.
 *   **Favicon Personalizado:** Icono LF con gradiente naranja corporativo, visible en la pestaña del navegador.
 *   **Gestión Proxy Angular:** Todas las peticiones del tipo `/api` son enrutadas transparentemente al backend a través de `proxy.conf.json` en local.
 

@@ -16,7 +16,7 @@
 
 .about-content {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     gap: 3rem;
     align-items: center;
 
@@ -24,6 +24,30 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* Estilos nuevos para la foto de perfil */
+.about-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: var(--radius-lg); /* Bordes redondeados del tema */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    aspect-ratio: 1 / 1; /* La hace cuadrada perfecta */
+    border: 4px solid white;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05); /* Efecto zoom al pasar el ratón */
+    }
+}
+
 
 .about-text {
     p {
