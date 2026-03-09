@@ -4,8 +4,19 @@
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding-top: 80px;
-    /* Space for header */
+    padding-top: 140px;
+    /* Space for header + extra padding for "air" */
+    padding-bottom: 80px;
+    /* Extra padding at the bottom */
+
+    @media (max-width: 480px) {
+        padding-top: 180px;
+        /* Aún más espacio en móvil */
+        margin-top: 2rem;
+        /* Margen superior extra */
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
 
 .hero-container {
@@ -50,6 +61,11 @@
     @media (max-width: 768px) {
         font-size: 3rem;
     }
+
+    @media (max-width: 480px) {
+        font-size: 2.2rem;
+        /* Título más pequeño en móviles */
+    }
 }
 
 .hero-subtitle {
@@ -61,17 +77,34 @@
     font-weight: 600;
     color: var(--secondary);
     margin-bottom: 1.5rem;
+
+    &::after {
+        display: none;
+        /* Asegurar que el adorno de h2 global no se dibuje por error */
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1.25rem;
+        /* Subtítulo más pequeño */
+    }
 }
 
 .hero-description {
     font-size: 1.125rem;
     color: var(--text-light);
     margin-bottom: 2.5rem;
+
+    @media (max-width: 480px) {
+        font-size: 1rem;
+        padding: 0 1.5rem;
+        /* Margen para que el texto respire y quede centrado */
+    }
 }
 
 .hero-actions {
     display: flex;
-    gap: 1rem;
+    gap: clamp(0.5rem, 2vw, 1rem);
+    /* Espaciado relativo */
 
     @media (max-width: 992px) {
         justify-content: center;
@@ -79,16 +112,31 @@
 
     @media (max-width: 480px) {
         flex-direction: column;
+        width: 100%;
+        /* Forzar el contenedor al 100% */
+
+        .btn {
+            width: 100%;
+            /* Hacemos que los botones ocupen todo el ancho y no desborden */
+            text-align: center;
+            padding: clamp(0.8rem, 3vw, 12px) clamp(1rem, 4vw, 28px);
+            font-size: clamp(0.85rem, 4vw, 1rem);
+            white-space: normal;
+            /* Permite que el texto se divida en varias líneas si la pantalla es enana */
+        }
     }
 }
 
-/* Abstract blob visual instead of a static image */
 .hero-visual {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 400px;
+
+    @media (max-width: 600px) {
+        height: 300px;
+    }
 }
 
 .blob-container {
@@ -98,6 +146,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 600px) {
+        width: 250px;
+        height: 250px;
+    }
 }
 
 .blob {
@@ -132,9 +185,18 @@
     align-items: center;
     box-shadow: 0 10px 30px rgba(129, 67, 25, 0.3);
 
+    @media (max-width: 600px) {
+        width: 200px;
+        height: 200px;
+    }
+
     i {
         font-size: 5rem;
         color: white;
+
+        @media (max-width: 600px) {
+            font-size: 3.5rem;
+        }
     }
 }
 

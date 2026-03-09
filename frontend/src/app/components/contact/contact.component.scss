@@ -1,6 +1,9 @@
 .contact {
     background-color: var(--bg-color);
-    padding-bottom: 6rem;
+    padding-bottom: 4rem;
+
+    /* Override global 100vh so that the footer fits below it in the final snap */
+    min-height: calc(100vh - 200px);
 }
 
 .section-desc {
@@ -139,6 +142,13 @@
             border-color: var(--primary-light);
             box-shadow: 0 0 0 3px rgba(211, 84, 0, 0.1);
             background: white;
+        }
+
+        /* --- Modo oscuro correcciones para Inputs --- */
+        :host-context(body.dark-theme) &:focus {
+            background: #1a1a1a;
+            color: #ffffff;
+            border-color: var(--primary);
         }
 
         &.invalid {

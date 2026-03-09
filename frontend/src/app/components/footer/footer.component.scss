@@ -3,6 +3,15 @@
     color: white;
     padding: 3rem 0;
     margin-top: auto;
+    scroll-snap-align: end;
+    /* Permite que el scroll "enganche" al final de la página viendo el footer */
+    transition: background-color 0.3s ease;
+}
+
+:host-context(body.dark-theme) .footer {
+    background-color: #080808;
+    /* Very dark almost black */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer-content {
